@@ -18,6 +18,7 @@ describe('fetchBreedDescription', () => {
   it('returns an error if an invalid/non-existent breed is passed in', (done) => {
     fetchBreedDescription('Maltese', (err, desc) => {
       assert.equal(err, 'Breed not found!');
+      assert.equal(desc, null);
     });
 
     done();
